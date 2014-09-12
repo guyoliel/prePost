@@ -1,9 +1,29 @@
 <ion-view title="Profile">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="friend in friends" type="item-text-wrap" ui-sref="app.profile-detail({profileId: friend.id})">
-        {{friend.name}}
-      </ion-item>
-    </ion-list>
+
+    <div class="item item-avatar">
+        <img src="http://upload.wikimedia.org/wikipedia/en/d/d8/Michael_J._Fox_as_Marty_McFly_in_Back_to_the_Future,_1985.jpg">
+        <h2>Marty McFly</h2>
+        <p>November 05, 1955</p>
+    </div>
+
+<!--     <div class="button-bar bar-positive">
+    <small ng-click="profile.toggle-gallery!=profile.toggle-gallery" class="button ion-images custom-icon"></small>
+    <small ng-click="profile.toggle-friends!=profile.toggle-friends" class="button ion-android-friends custom-icon"></small>
+    <small ng-click="profile.toggle-settings!=profile.toggle-settings"class="button ion-ios7-gear custom-icon"></small>
+</div> -->
+    <div class="button-bar bar-positive">
+        <small ui-sref="app.profile.gallery" class="button ion-images custom-icon"></small>
+        <small ui-sref="app.profile.friends" class="button ion-android-friends custom-icon"></small>
+        <small ui-sref="app.profile.settings" class="button ion-ios7-gear custom-icon"></small>
+    </div>
+
+    <ui-view name='details'></ui-view>
+
+    <!--<ion-list ng-if="profile.toggle-friends" class="list card">
+        <ion-item ng-repeat="friend in friends" class="item item-thumbnail-left" type="item-text-wrap" ui-sref="app.profile-detail({profileId: friend.id})">
+            <img ng-src="{{friend.picture}}" alt="">{{friend.name}}
+        </ion-item>
+    </ion-list>-->
   </ion-content>
 </ion-view>

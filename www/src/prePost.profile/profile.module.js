@@ -7,8 +7,7 @@
         views: {
           'tab-profile': {
             templateUrl: 'src/prePost.profile/profile.html',
-            controller: 'ProfileCtrl',
-            controllerAs: 'profile'
+            controller: 'ProfileCtrl as profile'
           }
         }
       })
@@ -20,6 +19,40 @@
             controller: 'ProfileDetailCtrl'
           }
         }
+      })
+
+      .state('app.profile.gallery', {
+          url: '/gallery',
+          views: {
+              'details': {
+                  template: '<h1>Gallery</h1>',
+                  controller: function($log, $scope) {
+                  }
+              }
+          }
+      })
+
+      .state('app.profile.friends', {
+          url: '/friends',
+          views: {
+              'details': {
+                  templateUrl: 'src/prePost.profile/profile-details-friends.html',
+                  controller: function($log, $scope) {
+                      $log.debug('friends', $scope.friends);
+                  }
+              }
+          }
+      })
+
+      .state('app.profile.settings', {
+          url: '/settings',
+          views: {
+              'details': {
+                  template: '<h1>Settings</h1>',
+                  controller: function($log, $scope) {
+                  }
+              }
+          }
       })
   }
     //injecting dependencies into the Config function
