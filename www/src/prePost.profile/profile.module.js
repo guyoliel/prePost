@@ -25,9 +25,8 @@
           url: '/gallery',
           views: {
               'details': {
-                  template: '<h1>Gallery</h1>',
-                  controller: function($log, $scope) {
-                  }
+                  templateUrl: 'src/prePost.profile/profile.gallery/profile-details-gallery.html',
+                  controller: 'ProfileGalleryCtrl as Gallery'
               }
           }
       })
@@ -36,10 +35,8 @@
           url: '/friends',
           views: {
               'details': {
-                  templateUrl: 'src/prePost.profile/profile-details-friends.html',
-                  controller: function($log, $scope) {
-                      $log.debug('friends', $scope.friends);
-                  }
+                  templateUrl: 'src/prePost.profile/profile.friends/profile-details-friends.html',
+                  controller: 'ProfileFriendsCtrl as Friends'
               }
           }
       })
@@ -48,9 +45,8 @@
           url: '/settings',
           views: {
               'details': {
-                  template: '<h1>Settings</h1>',
-                  controller: function($log, $scope) {
-                  }
+                  templateUrl: 'src/prePost.profile/profile.settings/profile-details-settings.html',
+                  controller: 'ProfileSettingsCtrl as Settings'
               }
           }
       })
