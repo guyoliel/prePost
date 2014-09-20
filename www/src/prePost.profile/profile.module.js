@@ -20,7 +20,15 @@
           }
         }
       })
-
+      .state('app.profile-detail.friends', {
+        url: '/friends',
+        views: {
+          'details': {
+            templateUrl: 'src/prePost.profile/profile.friends/profile-details-friends.html',
+            controller: 'ProfileFriendsCtrl as Friends'
+          }
+        }
+      })
       .state('app.profile.gallery', {
           url: '/gallery',
           views: {
