@@ -29,6 +29,24 @@
           }
         }
       })
+      .state('app.profile-detail.gallery', {
+        url: '/gallery',
+        views: {
+          'details': {
+            templateUrl: 'src/prePost.profile/profile.gallery/profile-details-gallery.html',
+            controller: 'ProfileGalleryCtrl as Gallery'
+          }
+        }
+      })
+      .state('app.profile-detail.settings', {
+        url: '/friends',
+        views: {
+          'details': {
+            templateUrl: 'src/prePost.profile/profile.settings/profile-details-settings.html',
+            controller: 'ProfileSettingsCtrl as Settings'
+          }
+        }
+      })
       .state('app.profile.gallery', {
           url: '/gallery',
           views: {
