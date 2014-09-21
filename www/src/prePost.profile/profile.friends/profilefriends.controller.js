@@ -1,8 +1,9 @@
 (function(){
 
     function ProfileFriendsCtrl(Friends,scope,stateParams) {
-        scope.friend = Friends.get(stateParams.profileId);
-        scope.friends = Friends.all();
+        
+        this.friend = Friends.get(stateParams.profileId);
+        this.friends = Friends.all();
 
         this.removeFriend = function (friendId) {
             Friends.removeFriend(friendId);

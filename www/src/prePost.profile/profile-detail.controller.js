@@ -1,7 +1,7 @@
 (function() {
 
   function ProfileDetailCtrl(scope, stateParams, Friends) {
-    scope.friend = Friends.get(stateParams.profileId);
+    this.friend = Friends.get(stateParams.profileId);
   }
 
     ProfileDetailCtrl.$inject = ['$scope', '$stateParams', 'Friends'];

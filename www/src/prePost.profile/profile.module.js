@@ -16,7 +16,7 @@
         views: {
           'tab-profile': {
             templateUrl: 'src/prePost.profile/profile-detail.html',
-            controller: 'ProfileDetailCtrl'
+            controller: 'ProfileDetailCtrl as Detail'
           }
         }
       })
