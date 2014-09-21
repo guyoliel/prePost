@@ -18,6 +18,10 @@
       get: function(friendId) {
         // Simple index lookup
         return friends[friendId];
+      },
+      removeFriend: function(friendId) {
+        friends.splice(friendId,1);
+        console.log(friends);
       }
     }
   }
