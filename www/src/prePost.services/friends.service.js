@@ -20,8 +20,10 @@
         return friends[friendId];
       },
       removeFriend: function(friendId) {
-        friends.splice(friendId,1);
-        console.log(friends);
+        for( i=friends.length-1; i>=0; i--) {
+            if( friends[i].id == friendId)
+                friends.splice(i,1);
+        }
       }
     }
   }
