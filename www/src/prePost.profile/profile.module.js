@@ -81,7 +81,8 @@
     Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
   angular.module('prePost.profile', [
-    'prePost.services'
+    'prePost.services',
+    'ionic'
     ])
     .config(Config)
 
