@@ -5,9 +5,9 @@
                   ui-sref="app.profile-detail({profileId: friend.id})">
             <img ng-src="{{friend.picture}}" alt="">{{friend.name}}
             <div class='item-button-right'>
-                <button class="button button-assertive" ng-click="Friends.removeFriend({{friend.id}})">
-                    <i class="ion-android-trash"></i>
-                </button>
+                <ion-option-button class="button button-assertive" ng-click="Friends.removeFriend({{friend.id}})">
+                    Delete <i class="ion-android-trash"></i>
+                </ion-option-button>
             </div>
         </ion-item>
     </ion-list>
